@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout2"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="30dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question2"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/question2" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dip"
+            android:id="@+id/reponse2">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/oui"
+                android:id="@+id/oui1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non"
+                android:id="@+id/non2" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout2"
+        android:layout_centerHorizontal="true"
+        android:stretchColumns="2"
+        android:id="@+id/tl_noter_parcours">
+
+        <TableRow>
+
+            <TextView android:text="@string/champ2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/note2" />
+
+            <Spinner
+                android:id="@+id/notes2"
+                android:gravity="center_horizontal" />
+        </TableRow>
+
+        <TableRow android:id="@+id/Add2">
+
+            <CheckBox
+                android:text="@string/favoris"
+                android:checked="true"
+                android:id="@+id/favori2" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_span="3"
+        android:text="@string/noter"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:id="@+id/noter"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@drawable/bouton_arrondi"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/tl_noter_parcours" />
+
+</RelativeLayout>

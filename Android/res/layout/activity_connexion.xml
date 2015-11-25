@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc"
+    android:gravity="center_vertical">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl_connexion"
+        android:layout_centerHorizontal="true">
+
+        <TableRow android:padding="10dp">
+
+            <TextView android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/email"
+                android:hint="@string/exemple_email"
+                android:inputType="textEmailAddress"
+                android:layout_width="wrap_content" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <TextView android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/password"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <TableRow
+            android:padding="10dp"
+            android:visibility="gone"
+            android:id="@+id/tr_poids">
+
+            <TextView android:text="@string/poids" />
+
+            <EditText
+                android:id="@+id/et_poids"
+                android:inputType="number"
+                android:gravity="center_horizontal" />
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+
+            <CheckBox
+                android:id="@+id/creation"
+                android:text="Créer le compte" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@drawable/bouton_arrondi"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/tl_connexion"
+        android:text="@string/connexion"
+        android:textAllCaps="false"
+        android:id="@+id/boutonConnexion"
+        android:layout_centerHorizontal="true"
+        android:fontFamily=""
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/messageRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:layout_marginTop="40dip"
+        android:layout_below="@id/boutonConnexion"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blanc"
+    android:id="@+id/tl_view">
+
+    <TableRow android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/nomFavoris"
+            android:padding="10dp"
+            android:width="130dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noteFavoris"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateFavoris"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_width="90dp"/>
+
+        <ImageButton
+            android:id="@+id/checkFavoris"
+            android:src="@drawable/star_filled"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp" />
+    </TableRow>
+</TableLayout>

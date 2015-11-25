@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc"
+    android:gravity="center_vertical">
+
+    <TableLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl_options"
+        android:layout_centerHorizontal="true">
+
+        <TableRow>
+
+            <TextView android:text="@string/poids"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/poids" />
+
+            <EditText android:id="@+id/et_poids_options"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tl_options">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/b_maj"
+                android:text="@string/maj"
+                android:textAllCaps="false"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:background="@drawable/bouton_arrondi"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/b_deconnexion"
+                android:text="@string/deconnexion"
+                android:textAllCaps="false"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:background="@drawable/bouton_deconnexion"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:id="@+id/tv_messageMaj"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+
+                />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

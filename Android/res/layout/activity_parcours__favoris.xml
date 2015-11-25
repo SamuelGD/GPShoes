@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc">
+
+    <TextView
+        android:id="@+id/messageRetourF"
+        android:text="@string/chargement"
+        android:textColor="#FF00a000"
+        android:paddingTop="10dip"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl_legendeF"
+        android:visibility="gone">
+
+        <TableRow>
+
+            <TextView
+                android:padding="10dp"
+                android:layout_alignLeft="@+id/nomFavoris"
+                android:textColor="@color/black"
+                android:text="@string/nom_parcours"
+                android:textStyle="bold"
+                android:id="@+id/nom" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_alignLeft="@+id/noteFavoris"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/note"
+                android:id="@+id/note" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_alignLeft="@+id/dateFavoris"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/date"
+                android:id="@+id/date" />
+
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/listeFavoris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tl_legendeF" />
+
+</RelativeLayout>
+

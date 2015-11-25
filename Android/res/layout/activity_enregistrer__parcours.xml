@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="30dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/question" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dip"
+            android:id="@+id/reponse">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/oui"
+                android:id="@+id/oui" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non"
+                android:id="@+id/non" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:layout_centerHorizontal="true"
+        android:stretchColumns="2"
+        android:id="@+id/tl_enregister_parcours">
+
+        <TableRow android:layout_width="wrap_content">
+
+            <TextView
+                android:text="@string/champ1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:id="@+id/tv1" />
+
+            <EditText
+                android:id="@+id/nomParcours"
+                android:layout_span="2" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="@string/champ2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/tv2" />
+
+            <Spinner
+                android:id="@+id/notes"
+                android:gravity="center_horizontal" />
+        </TableRow>
+
+        <TableRow>
+
+            <CheckBox
+                android:text="@string/favoris"
+                android:checked="true"
+                android:id="@+id/favori" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_span="3"
+        android:text="@string/boutton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@drawable/bouton_arrondi"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="false"
+        android:id="@+id/sauvegarder"
+        android:layout_below="@id/tl_enregister_parcours" />
+
+</RelativeLayout>

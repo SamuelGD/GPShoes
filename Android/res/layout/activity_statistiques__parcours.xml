@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc"
+    android:gravity="center_vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tableLayout"
+        android:id="@+id/tl_statistiques">
+
+        <TableRow>
+
+            <TextView android:text="@string/vitesse"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/vitesse"
+                android:padding="10dp"/>
+
+            <TextView android:id="@+id/vitesse_stats"
+                android:padding="10dp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="@string/temps"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:id="@+id/temps" />
+
+            <TextView android:id="@+id/temps_stats"
+                android:padding="10dp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="@string/calories_brules"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:id="@+id/kalo" />
+
+            <TextView android:id="@+id/calories_stats"
+                android:padding="10dp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="@string/longueur"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:id="@+id/longueur" />
+
+            <TextView android:id="@+id/longueur_stats"
+                android:padding="10dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tl_statistiques"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableLayout">
+
+        <TableRow>
+
+            <TextView android:text="@string/vitesse_visee"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/vitesseVisee" />
+
+            <EditText
+                android:id="@+id/vitesse_visee"
+                android:inputType="numberDecimal"
+                android:clickable="false"
+                android:padding="10dp"
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="@string/vitesse_suivi"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/activer" />
+
+            <CheckBox
+                android:id="@+id/cb_guider_vitesse"
+                android:checked="true" />
+        </TableRow>
+
+
+    </TableLayout>
+
+            <Button
+                android:text="@string/courir_parcours"
+                android:textAllCaps="false"
+                android:id="@+id/b_courir"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tableLayout"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bouton_arrondi"
+                android:layout_span="2" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b_courir"
+        android:layout_marginTop="30dp"
+        android:text="Visualiser"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:layout_alignStart="@id/b_courir"
+        android:layout_alignEnd="@id/b_courir"
+        android:background="@drawable/bouton_arrondi"
+        />
+
+</RelativeLayout>

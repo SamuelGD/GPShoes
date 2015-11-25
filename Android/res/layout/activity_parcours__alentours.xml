@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="@color/blanc">
+
+    <TableLayout
+        android:id="@+id/tv_recherche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TableRow android:gravity="center_vertical">
+
+            <TextView
+                android:text="@string/rayon_recherche"
+                android:id="@+id/tv_rayonRecherche"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="10dp" />
+
+            <EditText
+                android:text="2"
+                android:inputType="numberDecimal"
+                android:id="@+id/et_rayonRecherche"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp" />
+
+            <ImageButton
+                android:id="@+id/b_chercher"
+                android:src="@drawable/loupe"
+                android:scaleType="fitXY"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#00FFFFFF"
+                android:padding="10dp"
+                android:layout_marginLeft="30dp" />
+
+        </TableRow>
+    </TableLayout>
+
+
+    <TextView
+        android:id="@+id/messageRetourA"
+        android:text="@string/chargement"
+        android:textColor="#FF00a000"
+        android:paddingTop="10dip"
+        android:gravity="center"
+        android:layout_below="@id/tv_recherche"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tl_parcours"
+        android:visibility="gone"
+        android:layout_below="@id/tv_recherche"
+        android:layout_marginTop="20dp">
+
+        <TableRow>
+
+            <TextView
+                android:padding="10dp"
+                android:layout_alignLeft="@+id/nomFavoris"
+                android:textColor="@color/black"
+                android:text="@string/nom_parcours"
+                android:textStyle="bold" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_alignLeft="@+id/noteFavoris"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/note" />
+
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/listeFavoris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tl_parcours" />
+
+</RelativeLayout>
